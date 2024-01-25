@@ -9,7 +9,7 @@ from PIL import Image
 
 app=Flask(__name__)
 
-@app.route("/",methods=["POST","GET"])
+@app.route("/",methods=["POST"])
 def main():
     model=tf.keras.models.load_model("brain_tumor_network.h5")
     try:
