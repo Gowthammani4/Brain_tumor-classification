@@ -19,8 +19,6 @@ def main():
             bytes_decoded=base64.b64decode(a)
             img=Image.open(BytesIO(bytes_decoded))
             img=img.convert('RGB')
-            img.save('test.jpg')
-            img=cv2.imread('test.jpg')
             img=cv2.resize(img,dsize=(256,256),interpolation=cv2.INTER_CUBIC)
             img=img/255
             image=np.array([img])
